@@ -7,17 +7,17 @@
       </div>
       
       <div class="nav-links">
-        <router-link 
-          to="/" 
+        <router-link
+          to="/"
           class="nav-link"
           :class="{ active: $route.path === '/' }"
         >
           <span class="nav-icon">📊</span>
           <span class="nav-text">仪表盘</span>
         </router-link>
-        
-        <router-link 
-          to="/backends" 
+
+        <router-link
+          to="/backends"
           class="nav-link"
           :class="{ active: $route.path === '/backends' }"
         >
@@ -26,6 +26,15 @@
           <span v-if="backendStore.connectedBackendsCount > 0" class="nav-badge">
             {{ backendStore.connectedBackendsCount }}
           </span>
+        </router-link>
+
+        <router-link
+          to="/beagle-cam"
+          class="nav-link"
+          :class="{ active: $route.path === '/beagle-cam' }"
+        >
+          <span class="nav-icon">🐶</span>
+          <span class="nav-text">比格潜伏</span>
         </router-link>
       </div>
       
